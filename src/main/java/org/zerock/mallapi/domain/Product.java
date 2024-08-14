@@ -21,6 +21,7 @@ public class Product {
     private int price;
     private String pdesc;
     private boolean delFlag;
+
     @ElementCollection
     @Builder.Default
     private List<ProductImage> imageList = new ArrayList<>();
@@ -51,5 +52,9 @@ public class Product {
 
     public void clearList() {
         this.imageList.clear();
+    }
+
+    public void changeDel(boolean delFlog) {
+        this.delFlag = delFlag;
     }
 }
